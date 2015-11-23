@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+	<package name="helloworld" namespace="/" extends="struts-default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		<default-action-ref name="index" />
+		<!-- Dashboard -->
+		<action name="index" class="action.index.dat.trials.akamai.com.IndexAction"
+			method="execute">
+			<result name="success" type="tiles">index.success</result>
+		</action>
+		<action name="CreateRecord"
+			class="action.index.dat.trials.akamai.com.CreateRecordAction" method="execute">
+			<result name="success" type="tiles">createRecord.success</result>
+		</action>
+
+		<action name="ViewRecord"
+			class="action.index.dat.trials.akamai.com.ViewRecordAction" method="execute">
+			<result name="success" type="tiles">hello.success</result>
+		</action>
+
+		<action name="create" class="action.index.dat.trials.akamai.com.CreateAction"
+			method="execute">
+			<result name="success">/pages/menu.jsp</result>
+		</action>
+		<action name="Download"
+			class="action.index.dat.trials.akamai.com.DownloadAction" method="execute">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">1024</param>
+			</result>
+		</action>
+		<action name="UploadSalesAction"
+			class="action.index.dat.trials.akamai.com.UploadSalesAction" method="doUpload">
+			<result name="success" type="tiles">upload.sales.success</result>
+		</action>
+
+		<action name="UploadAction" class="action.index.dat.trials.akamai.com.UploadAction"
+			method="doUpload">
+			<result name="success" type="tiles">upload.success</result>
+		</action>
+		<action name="EditRecord" class="action.index.dat.trials.akamai.com.EditRecord"
+			method="execute">
+			<result name="success" type="tiles">RecordEditted</result>
+			<result name="edit" type="tiles">EditRecord.Index</result>
+		</action>
+
+		<action name="DownloadReport"
+			class="action.index.dat.trials.akamai.com.DownloadReportAction"
+			method="execute">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/vnd.openxmlformats-officedocument.wordprocessingml.document</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">1024</param>
+			</result>
+		</action>
+
+		<!-- Competitive data -->
+		<action name="competition"
+			class="action.index.dat.trials.akamai.com.CompetitiveAction" method="execute">
+			<result name="success" type="tiles">comp.success</result>
+		</action>
+
+		<action name="UploadCompetition"
+			class="action.index.dat.trials.akamai.com.UploadCompetitionAction"
+			method="execute">
+			<result name="success" type="tiles">upload.sales.success</result>
+		</action>
+
+		<action name="showCompetition"
+			class="action.index.dat.trials.akamai.com.ViewCompetitionAction"
+			method="execute">
+			<result name="success" type="tiles">competition.success</result>
+		</action>
+
+		
+
+		<action name="searchAction"
+			class="action.index.dat.trials.akamai.com.showCompetition" method="execute">
+			<result name="success" type="tiles">showComp.success</result>
+		</action>
+
+		<action name="DownloadComp"
+			class="action.index.dat.trials.akamai.com.DownloadCompAction" method="execute">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">1024</param>
+			</result>
+		</action>
+		
+		<!-- Logan -->
+		<action name="Log" class="action.log.dat.trials.akamai.com.UserAuthPubKey"
+			method="execute">
+			<result type="tiles" name="success">logan.submit</result>
+		</action>
+
+		<action name="logan" class="action.log.dat.trials.akamai.com.LogIndex"
+			method="execute">
+			<result type="tiles" name="success">logan.index</result>
+		</action>
+
+		<!-- Report Generation -->
+		<action name="GenerateReport"
+			class="action.index.report.trials.akamai.com.ReportIndexAction"
+			method="execute">
+			<result name="success" type="tiles">generate.report</result>
+		</action>
+
+		<action name="UploadReport"
+			class="action.index.report.trials.akamai.com.UploadReport" method="doUpload">
+			<result name="success" type="tiles">upload.success</result>
+			<result name="abc" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/vnd.openxmlformats-officedocument.wordprocessingml.document</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">1024</param>
+			</result>
+			<result name="fail" type="tiles">generate.report</result>
+		</action>
+	</package>
+</struts>

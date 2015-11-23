@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+   "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+   "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="baseLayout" template="/pages/baseLayout.jsp">
+		<put-attribute name="title" value="Template" />
+
+		<put-attribute name="menu" value="/pages/menu.jsp" />
+		<put-attribute name="body" value="/pages/body.jsp" />
+
+	</definition>
+
+	<definition name="index.success" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/pages/index.jsp" />
+	</definition>
+
+
+
+	<definition name="createRecord.success" extends="baseLayout">
+		<put-attribute name="title" value="Create Record" />
+		<put-attribute name="body" value="/pages/createRecord.jsp" />
+	</definition>
+
+	<definition name="hello.success" extends="baseLayout">
+		<put-attribute name="title" value="View Data" />
+		<put-attribute name="body" value="/pages/HelloWorld.jsp" />
+	</definition>
+
+	<definition name="upload.success" extends="baseLayout">
+		<put-attribute name="title" value="View Data" />
+		<put-attribute name="body" value="/pages/uploadSuccess.jsp" />
+	</definition>
+
+	<definition name="upload.sales.success" extends="baseLayout">
+		<put-attribute name="title" value="View Data" />
+		<put-attribute name="body" value="/pages/uploadDataSuccess.jsp" />
+	</definition>
+
+	<definition name="EditRecord.Index" extends="baseLayout">
+		<put-attribute name="title" value="Edit Record" />
+		<put-attribute name="body" value="/pages/editRecord.jsp" />
+	</definition>
+
+	<definition name="RecordEditted" extends="baseLayout">
+		<put-attribute name="title" value="Record Editted" />
+		<put-attribute name="body" value="/pages/RecordEditted.jsp" />
+	</definition>
+
+	<!-- Competitive data -->
+	<definition name="comp.success" extends="baseLayout">
+		<put-attribute name="title" value="Add Competitive Data" />
+		<put-attribute name="body" value="/pages/competitiveIndex.jsp" />
+	</definition>
+	
+	<definition name="competition.success" extends="baseLayout">
+		<put-attribute name="title" value="Competitive Data" />
+		<put-attribute name="body" value="/pages/showCompetition.jsp" />
+	</definition>
+
+	
+	
+	
+	<definition name="showComp.success" extends="baseLayout">
+		<put-attribute name="title" value="Competitive Data" />
+		<put-attribute name="body" value="/pages/competitiveData.jsp" />
+	</definition>
+	
+	
+	<!-- Report Generation -->
+	<definition name="report.index" extends="baseLayout">
+		<put-attribute name="title" value="Upload Data" />
+		<put-attribute name="body" value="/pages/report/dataUpload.jsp" />
+	</definition>
+	<definition name="generate.report" extends="baseLayout">
+		<put-attribute name="title" value="Upload Data" />
+		<put-attribute name="body" value="/pages/report/uploadReportData.jsp" />
+	</definition>
+
+	<!-- Logan -->
+	<definition name="logan.index" extends="baseLayout">
+		<put-attribute name="title" value="Welcome to Logan" />
+		<put-attribute name="menu" value="/pages/log/logMenu.jsp" />
+		<put-attribute name="body" value="/pages/log/menu.jsp" />
+	</definition>
+
+	<definition name="logan.submit" extends="baseLayout">
+		<put-attribute name="title" value="Request Submitted" />
+		<put-attribute name="menu" value="/pages/log/logMenu.jsp" />
+		<put-attribute name="body" value="/pages/log/log.jsp" />
+	</definition>
+
+</tiles-definitions>
