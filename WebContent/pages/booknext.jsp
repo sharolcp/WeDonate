@@ -56,7 +56,7 @@ h1 {
 		function validateForm1()
 		{
 			var book=document.book.bname.value;
-			var book=v=book.trim();
+			var book=book.trim();
 			var quantity=document.book.quantity.value;
 			var quantity=quantity.trim();
 			var contact=document.book.contact.value;

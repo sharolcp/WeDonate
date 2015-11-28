@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <body>
-	<div style="text-align: center; margin: auto padding :       10%;">
+	<div style="text-align: center; margin: auto padding :         10%;">
 		<div style="border: 1px solid #000; display: inline-block;">
 			<a href="food"><img src="images/food.png" alt="WeDonate"
 				width="276" height="187" style="padding-top: 5px" /> </a>
@@ -17,13 +17,24 @@
 		</div>
 	</div>
 
-	<div style="text-align: center; margin: auto padding :       10%;">
+	<div style="text-align: center; margin: auto padding :         10%;">
 		<div style="border: 1px solid #000; display: inline-block;">
 			<a href="garage"><img src="images/garage.jpeg" alt="WeDonate"
 				width="276" height="187" style="padding-top: 5px" /> </a>
 		</div>
 		<div style="border: 1px solid red; display: inline-block;">
 			<a href="blood"><img src="images/blood.jpeg" alt="WeDonate"
+				width="276" height="187" style="padding-top: 5px" /> </a>
+		</div>
+	</div>
+
+	<div style="text-align: center; margin: auto padding :         10%;">
+		<div style="border: 1px solid #000; display: inline-block;">
+			<a href="wishlist"><img src="images/wishlist.png" alt="WeDonate"
+				width="276" height="187" style="padding-top: 5px" /> </a>
+		</div>
+		<div style="border: 1px solid red; display: inline-block;">
+			<a href="event"><img src="images/event.png" alt="WeDonate"
 				width="276" height="187" style="padding-top: 5px" /> </a>
 		</div>
 	</div>

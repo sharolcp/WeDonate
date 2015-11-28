@@ -72,6 +72,22 @@ body {
 	font-size: 15px;
 }
 
+.content {
+	background: transparent;
+	border: 1px solid #D9D9D9;
+	box-shadow: 0 0 8px #4A4A4A;
+	float: left;
+	margin: 0 8px;
+	padding: 15px;
+	width: 700px;
+	font-size: 20px;
+	font-family: sans-serif;
+	font-style: italic;
+	font-stretch: expanded;
+	text-shadow: 1px 1px #333399;
+	text-align: justify;
+}
+
 .contentBox {
 	background: transparent;
 	border: 1px solid #D9D9D9;
@@ -94,7 +110,6 @@ body {
 }
 
 .tableWidgetNew {
-	
 	float: left;
 	width: 50%;
 }

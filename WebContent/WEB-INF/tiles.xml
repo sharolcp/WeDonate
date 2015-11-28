@@ -77,4 +77,28 @@
 		<put-attribute name="body" value="/pages/bloodResult.jsp" />
 	</definition>
 
+	<definition name="event.success" extends="baseLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/pages/event.jsp" />
+	</definition>
+
+	<definition name="event.next" extends="baseLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/pages/eventnext.jsp" />
+	</definition>
+
+	<definition name="wish.success" extends="baseLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/pages/wish.jsp" />
+	</definition>
+
+	<definition name="wish.next" extends="baseLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/pages/wishnext.jsp" />
+	</definition>
+
+	<definition name="contact" extends="baseLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/pages/contactUs.jsp" />
+	</definition>
 </tiles-definitions>

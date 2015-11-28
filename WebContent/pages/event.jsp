@@ -5,37 +5,50 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-<h3>Here is a list of item which are available for donation. If you
-	find any item that interests you please contact the person in charge
-	for more information.</h3>
-
+<h3>Here is a list of events. Click on each event to volunteer for
+	it.</h3>
+<script>
+      function volunteerForEvent(elem1) {
+       	var elem = document.getElementById(elem1).value;
+        if (elem == "Apply")
+                    { 
+        				document.getElementById(elem1).value = "Volunteered";
+                  }
+                else
+                {
+                	    document.getElementById(elem1).value = "Apply";
+                 }
+            } 
+</script>
 
 <div class="tableWidgetNew">
-	<div class="tableHeader">Item Name</div>
-	<div class="tableHeader">Quantity</div>
-	<div class="tableHeader">Author Name</div>
-	<div class="tableHeader">Donor Name</div>
-	<div class="tableHeader">Donor Number</div>
-
+	<div class="tableHeader">Event Name</div>
+	<div class="tableHeader">Time of Event</div>
+	<div class="tableHeader">Place</div>
+	<div class="tableHeader">Contact Number</div>
+	<div class="tableHeader"></div>
+	<%int c=0; %>
 	<div class="row" id="rowstart">
 		<s:iterator value="list">
 
 			<div class="tablerow">
 				<div class="tablerowone">
-					<s:property value="bname" />
+					<s:property value="name" />
 
 				</div>
 				<div class="tablerowone">
-					<s:property value="quantity" />
+					<s:property value="time" />
 				</div>
 				<div class="tablerowone">
-					<s:property value="aname" />
-				</div>
-				<div class="tablerowone">
-					<s:property value="dname" />
+					<s:property value="place" />
 				</div>
 				<div class="tablerowone">
 					<s:property value="contact" />
+				</div>
+				<div class="tablerowone">
+					<!--<input type="button" class="btn btn-default"
+						value="Apply" id="myButton1" onClick="changetext(this)"> -->
+					<%out.print("<input onclick='volunteerForEvent(this.id)' type='button' value='Apply' id='"+ c++ +"'/>");%>
 				</div>
 			</div>
 
@@ -59,12 +72,12 @@
 			
 			if(book == '')
 				{
-					document.getElementById('error').innerHTML="Please Enter Book Name";
+					document.getElementById('error').innerHTML="Please Enter Event Name";
 					return false;
 				}
 			if(quantity == ''|| isNaN(quantity))
 			{
-				document.getElementById('error').innerHTML="Please Enter Correct Quantity";
+				document.getElementById('error').innerHTML="Please Enter correct Quantity";
 				return false;
 			}
 			if(contact == '')
@@ -79,35 +92,47 @@
 			}
 		}
 </script>
-	<div id="error" align="center">Donation Box</div>
-	<form action="UploadBookInfo" name="book" method="post"
+	<div id="error" align="center">Event Details Box</div>
+	<form action="UploadEventInfo" name="event" method="post"
 		onSubmit="return validateForm1()">
 
 		<div style="clear: both; padding-top: 5px"></div>
-		<div style="width: 200px; float: left;">Book Name</div>
+		<div style="width: 200px; float: left;">Event Name</div>
 		<div style="width: 150px; float: left">
-			<input type="text" name="bname" id="bname">
+			<input type="text" name="name" id="name">
 		</div>
 		<div style="clear: both; padding-top: 5px"></div>
-		<div style="width: 200px; float: left;">Author Name</div>
+		<div style="width: 200px; float: left;">Number of Volunteers
+			Needed</div>
 		<div style="width: 150px; float: left">
-			<input type="text" name="aname" id="aname">
+			<input type="text" name="volunteer" id="volunteer">
 		</div>
 		<div style="clear: both; padding-top: 5px"></div>
-		<div style="width: 200px; float: left;">Quantity</div>
+		<div style="width: 200px; float: left;">Organization Name</div>
 		<div style="width: 150px; float: left">
-			<input type="text" name="quantity" id="quantity">
+			<input type="text" name="oname" id="oname">
 		</div>
 		<div style="clear: both; padding-top: 5px"></div>
-		<div style="width: 200px; float: left;">Donator Name</div>
+		<div style="width: 200px; float: left;">Time of Event</div>
 		<div style="width: 150px; float: left">
-			<input type="text" name="dname" id="dname">
+			<input type="text" name="time" id="time">
+		</div>
+		<div style="clear: both; padding-top: 5px"></div>
+		<div style="width: 200px; float: left;">Place of Event</div>
+		<div style="width: 150px; float: left">
+			<input type="text" name="place" id="place">
 		</div>
 		<div style="clear: both; padding-top: 5px"></div>
 		<div style="width: 200px; float: left;">Contact Number</div>
 		<div style="width: 150px; float: left">
 			<input type="text" name="contact" id="contact">
 		</div>
+		<div style="clear: both; padding-top: 5px"></div>
+		<div style="width: 200px; float: left;">Event Link</div>
+		<div style="width: 150px; float: left">
+			<input type="text" name="eventLink" id="eventLink">
+		</div>
+
 		<br> <br> <br>
 		<center>
 			<input id="enterValue" type="submit" value="Submit" />

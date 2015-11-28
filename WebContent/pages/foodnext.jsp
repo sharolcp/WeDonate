@@ -50,13 +50,13 @@ h1 {
 	<script type="text/javascript">
 		function validateForm1()
 		{
-			var book=document.book.bname.value;
-			var book=v=book.trim();
-			var quantity=document.book.quantity.value;
+			var book=document.food.name.value;
+			var book=book.trim();
+			var quantity=document.food.quantity.value;
 			var quantity=quantity.trim();
-			var contact=document.book.contact.value;
+			var contact=document.food.contact.value;
 			var contact=contact.trim();
-			var uname=document.book.dname.value;
+			var uname=document.food.dname.value;
 			var uname=uname.trim();
 			
 			if(book == '')
@@ -82,7 +82,7 @@ h1 {
 		}
 </script>
 	<div id="error" align="center">Donation Box</div>
-	<form action="UploadFood" name="misc" method="post"
+	<form action="UploadFood" name="food" method="post"
 		onSubmit="return validateForm1()">
 
 		<div style="clear: both; padding-top: 5px"></div>

@@ -5,16 +5,15 @@
 
 <div>
 	<div style="width: 15%; float: left">
-		<img src="images/weDonate.png" alt="WeDonate"
-			style="padding-top: 5px" />
+		<img src="images/weDonate.png" alt="WeDonate" style="padding-top: 5px" />
 	</div>
 
 	<div style="width: 25%; float: left; padding-top: 10px">We Donate</div>
 	<div style="width: 20%; float: left; padding-top: 10px">
-		<a href="/WeDonate/login">Login</a>
+		<a href="/WeDonate/contact">Contact Us</a>
 
 	</div>
 	<div style="width: 20%; float: left; padding-top: 10px">
-		<a href="/WeDonate">Contact Us</a>
+		<a href="/WeDonate">Log Out</a>
 	</div>
 </div>

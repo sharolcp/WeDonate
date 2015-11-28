@@ -19,7 +19,7 @@
 			<result name="error" type="tiles">login.error</result>
 		</action>
 		<!-- Sign Up -->
-		<action name="UploadInfo" class="donation.utdallas.com.UploadUserInfo"
+		<action name="UploadInfo" class="donation.utdallas.com.User"
 			method="execute">
 			<result name="success" type="tiles">upload.success</result>
 		</action>
@@ -34,34 +34,32 @@
 			<result name="success" type="tiles">donate.success</result>
 		</action>
 		<!-- Book -->
-		<action name="book" class="donation.utdallas.com.UploadBookInfo"
-			method="execute">
+		<action name="book" class="donation.utdallas.com.Book" method="execute">
 			<result name="success" type="tiles">book.success</result>
 		</action>
 
-		<action name="UploadBookInfo" class="donation.utdallas.com.UploadBookInfo"
+		<action name="UploadBookInfo" class="donation.utdallas.com.Book"
 			method="execute">
 			<result name="success" type="tiles">book.next</result>
 		</action>
 		<!-- Garage Sale -->
 
-		<action name="garage" class="donation.utdallas.com.UploadMiscInfo"
+		<action name="garage" class="donation.utdallas.com.GarageSale"
 			method="execute">
 			<result name="success" type="tiles">misc.success</result>
 		</action>
 
-		<action name="UploadMiscInfo" class="donation.utdallas.com.UploadMiscInfo"
+		<action name="UploadMiscInfo" class="donation.utdallas.com.GarageSale"
 			method="execute">
 			<result name="success" type="tiles">misc.next</result>
 		</action>
 		<!-- Food -->
 
-		<action name="food" class="donation.utdallas.com.UploadFoodInfo"
-			method="execute">
+		<action name="food" class="donation.utdallas.com.Food" method="execute">
 			<result name="success" type="tiles">food.success</result>
 		</action>
 
-		<action name="UploadFoodInfo" class="donation.utdallas.com.UploadFoodInfo"
+		<action name="UploadFoodInfo" class="donation.utdallas.com.Food"
 			method="execute">
 			<result name="success" type="tiles">food.next</result>
 		</action>
@@ -71,9 +69,37 @@
 			<result name="success" type="tiles">blood.success</result>
 		</action>
 
-		<action name="SearchBlood" class="donation.utdallas.com.SearchBlood"
+		<action name="SearchBlood" class="donation.utdallas.com.Blood"
 			method="execute">
 			<result name="success" type="tiles">blood.result</result>
+		</action>
+
+		<!-- Event -->
+		<action name="event" class="donation.utdallas.com.Event"
+			method="execute">
+			<result name="success" type="tiles">event.success</result>
+		</action>
+
+		<action name="UploadEventInfo" class="donation.utdallas.com.Event"
+			method="execute">
+			<result name="success" type="tiles">event.next</result>
+		</action>
+
+		<!-- Wishlist -->
+		<action name="wishlist" class="donation.utdallas.com.Wishlist"
+			method="execute">
+			<result name="success" type="tiles">wish.success</result>
+		</action>
+
+		<action name="UploadWishlistInfo" class="donation.utdallas.com.Wishlist"
+			method="execute">
+			<result name="success" type="tiles">wish.next</result>
+		</action>
+
+		<!-- contact -->
+		<action name="contact" class="donation.utdallas.com.LogAction"
+			method="execute">
+			<result name="success" type="tiles">contact</result>
 		</action>
 
 	</package>

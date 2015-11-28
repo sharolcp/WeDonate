@@ -3,10 +3,28 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
-
+<div class="content">
+	We a team of five graduate students came up with an idea to make an
+	online system to provide for the needy. <br> <br> With our
+	system you will be able to:
+	<ul>
+		<li>Provide needy students with free food and book</li>
+		<li>Help poor families with clothes and furniture</li>
+		<li>Arrange Blood bags for patients</li>
+		<li>Sponsor activities for good cause</li>
+	</ul>
+	<br> Communication is made easier between non-profit
+	organizations, donors and people in need. Right resources will reach
+	target population at the right time. Trusted information available as
+	the users are authenticated before adding them to the system. Do
+	contribute and support community change. <br> <br> <br>
+	Questions pertaining donations? Please visit our <a
+		href="https://www.facebook.com/WeDonateToCommunity">Facebook</a> page
+</div>
+<img src="images/pig.jpg" width="385" height="250"
+	style="padding-left: 120px; padding-bottom: 10px">
 <div class="contentBox">
-<script>alert("Invalid Username or Password")</script>
+	<script>alert("Invalid Username or Password")</script>
 	<script type="text/javascript">
 		function validateForm()
 		{
@@ -45,9 +63,11 @@
 		</center>
 
 	</form>
-	<br><br>
+	<br> <br>
 	<form action="signup" name="login" method="post">
-		<center><input id="SignUp" type="submit" value="Click Here to Sign Up for Free" />
+		<center>
+			<input id="SignUp" type="submit"
+				value="Click Here to Sign Up for Free" />
 		</center>
 	</form>
 </div>

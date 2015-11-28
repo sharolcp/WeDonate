@@ -44,13 +44,13 @@
 	<script type="text/javascript">
 		function validateForm1()
 		{
-			var book=document.book.bname.value;
-			var book=v=book.trim();
-			var quantity=document.book.quantity.value;
+			var book=document.misc.name.value;
+			var book=book.trim();
+			var quantity=document.misc.quantity.value;
 			var quantity=quantity.trim();
-			var contact=document.book.contact.value;
+			var contact=document.misc.contact.value;
 			var contact=contact.trim();
-			var uname=document.book.dname.value;
+			var uname=document.misc.dname.value;
 			var uname=uname.trim();
 			
 			if(book == '')
